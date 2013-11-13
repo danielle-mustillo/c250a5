@@ -85,26 +85,29 @@ public class searchEngine {
     
 	
     public static void main(String args[]) throws Exception{		
-	searchEngine mySearchEngine = new searchEngine();
-	// to debug your program, start with.
-	//	mySearchEngine.traverseInternet("http://www.cs.mcgill.ca/~blanchem/250/a.html");
-	
-	// When your program is working on the small example, move on to
-	mySearchEngine.traverseInternet("http://www.cs.mcgill.ca");
-	
-	// TODO this is just for debugging purposes. REMOVE THIS BEFORE SUBMITTING
-	System.out.println(mySearchEngine);
-	
-	mySearchEngine.computePageRanks();
-	
-	BufferedReader stndin = new BufferedReader(new InputStreamReader(System.in));
-	String query;
-	do {
-	    System.out.print("Enter query: ");
-	    query = stndin.readLine();
-	    if ( query != null && query.length() > 0 ) {
-		System.out.println("Best site = " + mySearchEngine.getBestURL(query));
-	    }
-	} while (query!=null && query.length()>0);				
-    } // end of main
+		searchEngine mySearchEngine = new searchEngine();
+		// to debug your program, start with.
+		// mySearchEngine.traverseInternet("http://www.cs.mcgill.ca/~blanchem/250/a.html");
+
+		// When your program is working on the small example, move on to
+		mySearchEngine.traverseInternet("http://www.cs.mcgill.ca");
+
+		// TODO this is just for debugging purposes. REMOVE THIS BEFORE
+		// SUBMITTING
+		System.out.println(mySearchEngine);
+
+		mySearchEngine.computePageRanks();
+
+		BufferedReader stndin = new BufferedReader(new InputStreamReader(
+				System.in));
+		String query;
+		do {
+			System.out.print("Enter query: ");
+			query = stndin.readLine();
+			if (query != null && query.length() > 0) {
+				System.out.println("Best site = "
+						+ mySearchEngine.getBestURL(query));
+			}
+		} while (query != null && query.length() > 0);
+	} // end of main
 }
