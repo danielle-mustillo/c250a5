@@ -11,18 +11,18 @@ public class searchEngine {
     
     // Constructor initializes everything to empty data structures
     // It also sets the location of the internet files
-    searchEngine() {
-	// Below is the directory that contains all the internet files
-	htmlParsing.internetFilesLocation = "internetFiles";
-	wordIndex = new HashMap<String, LinkedList<String> > ();		
-	internet = new directedGraph();				
-    } // end of constructor2013
+	searchEngine() {
+		// Below is the directory that contains all the internet files
+		htmlParsing.internetFilesLocation = "internetFiles";
+		wordIndex = new HashMap<String, LinkedList<String>>();
+		internet = new directedGraph();
+	} // end of constructor2013
     
     
-    // Returns a String description of a searchEngine
-    public String toString () {
-	return "wordIndex:\n" + wordIndex + "\ninternet:\n" + internet;
-    }
+	// Returns a String description of a searchEngine
+	public String toString() {
+		return "wordIndex:\n" + wordIndex + "\ninternet:\n" + internet;
+	}
     
     
     // This does a graph traversal of the internet, starting at the given url.
@@ -92,7 +92,7 @@ public class searchEngine {
 	// When your program is working on the small example, move on to
 	mySearchEngine.traverseInternet("http://www.cs.mcgill.ca");
 	
-	// this is just for debugging purposes. REMOVE THIS BEFORE SUBMITTING
+	// TODO this is just for debugging purposes. REMOVE THIS BEFORE SUBMITTING
 	System.out.println(mySearchEngine);
 	
 	mySearchEngine.computePageRanks();
